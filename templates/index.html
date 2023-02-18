@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../static/style.css">
+        <title>Please rate your service</title>
+    </head>
+    <body>
+        <div class="container">
+            <img src="../static/logo.png" alt="Dental" class="logo">
+            {% if message %}
+            <p class="message">{{ message | safe }}</p>
+            {% endif %}
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <h3>Имя клиента</h3>
+                    <input
+                        type="text"
+                        name="customer"
+                        placeholder="Введите Ваше имя"
+                    />
+                </div>
+                <div class="form-group">
+                  <h3>Врач</h3>
+                  <select name="dealer">
+                    <option value="">Выберите врача </option>
+                    <option value="Иванов Иван">Иванов Иван</option>
+                    <option value="Алксандрова Саша">Алксандрова Саша</option>
+                    <option value="Дмитриев Дмитрий">Дмитриев Дмитрий</option>
+                    <option value="Алешина Алена">Алешина Алена</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>Пожалуйста, оцените качество обслуживания</h3>
+                  <input type="radio" name="rating" value="1" /> 1
+                  <input type="radio" name="rating" value="2" /> 2
+                  <input type="radio" name="rating" value="3" /> 3
+                  <input type="radio" name="rating" value="4" /> 4
+                  <input type="radio" name="rating" value="5" /> 5
+                  <input type="radio" name="rating" value="6" /> 6
+                  <input type="radio" name="rating" value="7" /> 7
+                  <input type="radio" name="rating" value="8" /> 8
+                  <input type="radio" name="rating" value="9" /> 9
+                  <input type="radio" name="rating" value="10" checked /> 10
+                </div>
+                <div class="form-group">
+                  <h3>Оставьте Ваш отзыв</h3>
+                  <textarea
+                    name="comments"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Расскажите нам, что Вам понравилось, а что - нет"
+                  ></textarea>
+                </div>
+                <input type="submit" value="Оставить отзыв" class="btn" />
+            </form>
+        </div>
+    </body>
+</html>
