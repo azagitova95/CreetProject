@@ -24,7 +24,8 @@
    - если есть установленный git, то можно:
       - открыть командную строку
       - перейти в папку cd C:\\путь_до_папки\<мой_проект>
-      - выполнить git clone https://github.com/azagitova95/CreetProject/tree/master
+      - выполнить git clone https://github.com/azagitova95/CreetProject.git
+      - выполнить git checkout master
    - если git не установлен, то можно скачать архив перейдя в Clone -> Download zip
       - разархивировать папку в директорию <мой_проект>
       - открыть командную строку
